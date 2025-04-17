@@ -25,7 +25,7 @@ This application uses a web crawler to fetch web pages and stores the crawled da
 
 ## Steps to Run
 
-1. Clone the repository: `git clone [https://github.com/DeathRay99/web-crawler-with-llm`](https://github.com/DeathRay99/web-crawler-with-llm`)
+1. Clone the repository: `git clone https://github.com/DeathRay99/web-crawler-with-llm.git`
 
 2. Install ollama locally. You can download the latest version from the [Ollama Website](https://ollama.ai/). After downloading, open a terminal and run the command: `ollama run llama2`. This will download the LLaMA2 model (approximately 5GB) and start serving it. We need LLaMA2 because we are using it for LLM analysis.
 
