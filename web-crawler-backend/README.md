@@ -46,4 +46,5 @@ This application uses a web crawler to fetch web pages and stores the crawled da
 
 * `/api/crawl`: Trigger a crawl job and after crawling does the llm analysis (summary, sentiment, category, insights) then stores final result to db.
 * `/api/page/{page_id}`: Get a single crawled page by ID.
+* `/api/pages/list`: Get a list of all crawled pages (just ID and title).
 

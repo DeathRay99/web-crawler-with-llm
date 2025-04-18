@@ -32,9 +32,9 @@ class CrawlResponse(BaseModel):
     page_count: int = 0
 
 
-class AnalysisRequest(BaseModel):
-    page_ids: List[int]
-
+class PageListItem(BaseModel):
+    id: int
+    title: str
 
 class PageResponse(BaseModel):
     pages: List[CrawledPage]
@@ -171,3 +171,20 @@ async def get_page(page_id: int, database: Database = Depends(get_db)):
     if not page:
         raise HTTPException(status_code=404, detail="Page not found")
     return page
+
+@router.get("/pages/list", response_model=List[PageListItem])
+async def list_pages(database: Database = Depends(get_db)):
+    """
+    Get a list of all pages (just ID and title).
+    """
+    try:
+        pages = await db.get_pages(limit=100)
+        result = []
+        for page in pages:
+            item = PageListItem(id=page.id, title=page.title)
+            result.append(item)
+
+        return result
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error fetching pages list: {str(e)}")
