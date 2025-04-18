@@ -29,7 +29,7 @@ This application uses a web crawler to fetch web pages and stores the crawled da
 
 2. Install ollama locally. You can download the latest version from the [Ollama Website](https://ollama.ai/). After downloading, open a terminal and run the command: `ollama run llama2`. This will download the LLaMA2 model (approximately 5GB) and start serving it. We need LLaMA2 because we are using it for LLM analysis.
 
-3. Navigate to the root directory (web-crawler-backend) and create a virtual environment:
+3. Navigate to the root directory for backend (web-crawler-backend) and create a virtual environment:
    On Windows: `python -m venv venv`
    On Linux/Mac: `python3 -m venv venv`
    Then, activate the virtual environment:

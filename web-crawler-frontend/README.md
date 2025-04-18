@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Web Crawler Frontend
+
+This is the frontend repository for the Web Crawler application, built using Next.js and React. It's a web application that allows users to crawl, analyze, and extract insights from any website. The application is designed to be user-friendly and provide a seamless experience for users.
+
+The application takes in a website domain as input and crawls the website, extracting content in the form of text, images, and other data. The extracted content is then analyzed using a large language model (LLM) to extract insights such as sentiment, categories, and more. The results are then presented to the user in a comprehensive and easy-to-understand format.
+
+## Table of Contents
+
+* [Getting Started](#getting-started)
+* [Features](#features)
+* [API Documentation](#api-documentation)
 
 ## Getting Started
 
-First, run the development server:
+To run the application, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Clone the repository: `git clone https://github.com/DeathRay99/web-crawler-with-llm.git`
+2. Navigate to root directory for frontend (web-crawler-frontend) & Install dependencies: `npm install` or `yarn install`
+3. Start the development server: `npm run dev` or `yarn dev`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+* Provide a user-friendly input field for users to enter website domains they wish to crawl
+* Display real-time updates on the status of the crawling process to keep users informed
+* Allow users to view detailed information and insights about the pages that have been crawled previously
+* Display detailed information about each crawled page, including the page title, content, internal and external links discovered, timestamp of the crawl, metadata, and AI-powered analysis such as sentiment, summary, insights, and category.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## API Documentation
 
-## Learn More
+The API documentation can be found in the [API repository](https://github.com/DeathRay99/web-crawler-with-llm/tree/master/web-crawler-backend).
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

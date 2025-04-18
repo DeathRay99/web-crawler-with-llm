@@ -42,7 +42,7 @@ class OllamaAnalyzer:
         3. The overall sentiment (positive, neutral, negative)
         4. Three key insights or recommendations based on this content
         
-        Return ONLY valid JSON with these fields: summary, category, sentiment, insights (array of strings)
+        Return ONLY valid JSON with these fields: summary (string), category (string), sentiment(string), insights (array of strings)
         """
     
     def _generate_response(self, prompt: str) -> str:
