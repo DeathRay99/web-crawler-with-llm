@@ -43,6 +43,18 @@ class OllamaAnalyzer:
         4. Three key insights or recommendations based on this content
         
         Return ONLY valid JSON with these fields: summary (string), category (string), sentiment(string), insights (array of strings)
+
+        Example output:
+       {
+        "summary": "Crawl4AI Documentation provides information on setting up and using the Crawl4AI platform for web crawling, including installation, quick start, blog, and advanced features.",
+        "category": "technology",
+        "sentiment": "neutral",
+        "insights": [
+            "The documentation provides a comprehensive overview of the platform's features and capabilities.",
+            "The blog section offers valuable insights and updates on the latest developments in web crawling technology.",
+            "The quick start guide is a useful resource for those looking to get started with Crawl4AI quickly."
+        ]
+       }
         """
     
     def _generate_response(self, prompt: str) -> str:
